@@ -1,7 +1,7 @@
 // Nihad Ibadzade 251ADB064
 // https://github.com/Nihadname/calc-lab-home
 // Compile with: gcc -O2 -Wall -Wextra -std=c17 -o calc calc.c -lm
-// Resources used: Cursor Grok. I asked it to help with the parser and reading the file. this chat, no link.
+// Resources used: Cursor Grok. I asked it to help with the parser and reading the file. this chat
 
 // output name is like task1_nihad_ibadzade_251ADB064.txt
 
@@ -20,7 +20,7 @@
 #define STU_LAST "ibadzade"
 #define STU_ID "251ADB064"
 
-// max and min for long long, didnt want to include limits.h
+// max and min for long long,didnt want to include limits.h
 #define LL_MAX 9223372036854775807LL
 #define LL_MIN (-9223372036854775807LL - 1)
 
@@ -279,7 +279,7 @@ static void advance(Parser *p) {
         return;
     }
 
-    // anything else (# in the middle, a letter, a dot) is just invalid
+    // anything else (# in the middle, a letter, a dot) is  invalid
     p->cur.kind = TOK_BAD;
     p->cur.pos = pos;
     p->i++;
