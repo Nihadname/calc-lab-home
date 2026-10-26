@@ -207,6 +207,9 @@ static void scan_number(Parser *p) {
     p->cur.val = num_int(ival);
 }
 
+// pos is i+1, so the first char is position 1. spaces, comments and newlines count too.
+// i skip spaces but i dont move the count back, so the token starts on its own first char.
+// the error is that token. if a number or ) is missing at the end, its the newline, or len+1 if the file dont end with one.
 static void advance(Parser *p) {
     if(p->failed) {
         return;
